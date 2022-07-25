@@ -30,6 +30,6 @@ public class SystemTimeConverter {
 
         String newtimevalue = showHr+":"+mm+":"+ss+" "+daytime;
         JOptionPane.showMessageDialog(null, newtimevalue);
-
+        //Using JSwing
     }
 }
