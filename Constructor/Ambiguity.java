@@ -1,4 +1,4 @@
-public class ContructorDemo_1 {
+public class Ambiguity {
     public static void main(String[] args) {
         System.out.println("Hello World!");
         A a = new A(4, 2);
