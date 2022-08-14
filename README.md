@@ -1,2 +1,2 @@
 # JavaBeginnerProblems
-I soleved these silly Java problems, I thought it would help other beginners.
+I soleved these silly Java problems at my OOP course at university, I thought it would help other beginners.
