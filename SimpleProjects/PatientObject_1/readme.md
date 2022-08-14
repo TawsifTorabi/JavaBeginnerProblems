@@ -1,3 +1,5 @@
+It was a exam question on my OOP course.
+
 ## Question:
 Suppose you have to develop a java class  **Patient**  for your client. Inside of the  **src**  package  
 there is a package named  **patients**.  The  **Patient**  class is located inside of the  **patients**  
