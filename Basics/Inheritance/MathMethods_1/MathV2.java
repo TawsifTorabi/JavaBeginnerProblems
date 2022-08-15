@@ -25,6 +25,6 @@ public class MathV2 extends MathV1{
         //write a code to print the 2nd smallest number between var1, var2 and var3
         int[] ArrayInt = {var1, var2, var3};
         Arrays.sort(ArrayInt);
-        System.out.println(ArrayInt[1]);
+        System.out.print(ArrayInt[1]);
     }
 }
