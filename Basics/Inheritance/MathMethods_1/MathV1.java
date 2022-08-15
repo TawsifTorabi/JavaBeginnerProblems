@@ -25,11 +25,13 @@ public class MathV1 {
             big1 = var2;
             small1 = var1;
         }
+        System.out.print("Even Numbers Between var1 & var2 - ");
         for (int i = small1; i <= big1; i++){
             if(i%2 == 0){
-                System.out.println(i);
+                System.out.print(i + " ");
             }
         }
+        System.out.println();
     }
 
     void power(int a, int b){
@@ -43,25 +45,25 @@ public class MathV1 {
             exponent--;
         }
 
-        System.out.println(output);
+        System.out.println("Power Operation Result is : " + output);
     }
 
     int factorial(){
-        //return the factorial of var3;
+        //return the factorial of var3
         int i;
-        int fact = 1;
+        int factorial = 1;
         int num = var3;
         for(i=1; i<=num; i++){
-            fact = fact*i;
+            factorial = factorial*i;
         }
-        return fact;
+        return factorial;
     }
     void fibo(){
         //write code to print Fibonacci series from var2 to var3
         int n = var2 - var3;
         int firstTerm = var2;
         int secondTerm = var2 + 1;
-
+        System.out.print("The Fibonacci series from var2(" + var2 + ") to var3(" + var3 + ") is - ");
         for (int i=1; i<=n; i++) {
             System.out.print(firstTerm + ", ");
             //Calculate next term
