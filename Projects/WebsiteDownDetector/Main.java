@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.net.*;
 
 
-public class Test extends JFrame{
+public class Main extends JFrame{
     //URL Input Text
     private final JTextField urlInput = new JTextField("", 20);
     //Status Section Objects
@@ -89,7 +89,7 @@ public class Test extends JFrame{
 
 
 
-    public Test(){
+    public Main(){
         super("Website Down Detector");
         setSize(500,150);
         setLocation(500,200);
@@ -144,6 +144,6 @@ public class Test extends JFrame{
     }
 
     public static void main(String[] args){
-        new Test();
+        new Main();
     }
 }
