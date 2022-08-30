@@ -6,13 +6,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URISyntaxException;
-import java.net.URL;
+import java.net.*;
 
 
-public class Main extends JFrame{
+public class Test extends JFrame{
     //URL Input Text
     private final JTextField urlInput = new JTextField("", 20);
     //Status Section Objects
@@ -42,20 +39,22 @@ public class Main extends JFrame{
             statusOut.setText("Please Input URL");
         }
         if(isValidURL(URL)){
-                validStatus = true;
-                try {
-                    if(TestURL(URL)){
-                        statusOut.setForeground(Color.BLUE);
-                        statusOut.setText("Website is Online!");
-                    }
-                } catch (SSLException ex) {
-                    statusOut.setForeground(Color.RED);
-                    statusOut.setText("Website is Online! Invalid SSL Certificate");
+            validStatus = true;
+            try {
+                if(TestURL(URL)){
+                    statusOut.setForeground(Color.BLUE);
+                    statusOut.setText("Website is Online!");
                 }
-                catch (IOException ex) {
-                    statusOut.setForeground(Color.RED);
-                    statusOut.setText("Error Connecting");
-                }
+            } catch (SSLException ex) {
+                statusOut.setForeground(Color.RED);
+                statusOut.setText("Website is Online! Invalid SSL Certificate");
+            } catch (UnknownHostException ex) {
+                statusOut.setForeground(Color.RED);
+                statusOut.setText("This Website does not exist");
+            } catch (IOException ex) {
+                statusOut.setForeground(Color.RED);
+                statusOut.setText("Error Connecting");
+            }
         }else{
             validStatus = false;
             statusOut.setForeground(Color.BLACK);
@@ -90,7 +89,7 @@ public class Main extends JFrame{
 
 
 
-    public Main(){
+    public Test(){
         super("Website Down Detector");
         setSize(500,150);
         setLocation(500,200);
@@ -145,6 +144,6 @@ public class Main extends JFrame{
     }
 
     public static void main(String[] args){
-        new Main();
+        new Test();
     }
 }
