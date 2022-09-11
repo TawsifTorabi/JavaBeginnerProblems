@@ -1,6 +1,6 @@
 Harry Potter,879,JkR,1987
 Masud Rana,342,KaH,1967
 Bhoyal Raat,332,KaH,1907
-Masud Rana,342,KaH,1982
-Masud Rana,342,KaH,2001
-Masud Rana,342,KaH,1806
+Begun Bari,342,KaH,1982
+Mohabharot,342,KaH,2001
+Tin Goeyenda,342,KaH,1806
