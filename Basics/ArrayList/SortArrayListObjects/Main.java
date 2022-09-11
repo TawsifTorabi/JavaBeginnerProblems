@@ -4,12 +4,13 @@ import java.util.ArrayList;
 import javax.swing.*;
 import java.awt.*;
 import java.util.Collections;
+import java.util.Scanner;
 
 
 public class Main{
     public static void main(String[] args) throws Exception {
 
-        BufferedReader BR = new BufferedReader(new FileReader("C:\\Users\\User\\Desktop\\Shahed2\\src\\book.txt"));
+        BufferedReader BR = new BufferedReader(new FileReader("C:/Users/WALTON/Desktop/Shahed2/src/book.txt"));
         String line;
         String[] lineParts;
         ArrayList BookList = new ArrayList();
@@ -21,6 +22,26 @@ public class Main{
             String Author = lineParts[2];
             long PublishYear = Integer.parseInt(lineParts[3]);
             BookList.add(new Book(Bookname, Bookid, Author, PublishYear));
+        }
+
+        System.out.println("Search for Book Name:");
+        Scanner sc = new Scanner(System.in);
+        String Query = sc.nextLine();
+
+        boolean isAvailable = false;
+        for (int j=0; j<BookList.size(); j++){
+            String Name = ((Book)BookList.get(j)).getBookName();
+            if(Name.contains(Query)){
+                isAvailable = true;
+                System.out.println(Query + " is Available");
+                break;
+            }else{
+                isAvailable = false;
+            }
+        }
+        if(isAvailable == false){
+            System.out.println(Query + " is Not Available");
+
         }
 
 
@@ -39,20 +60,15 @@ public class Main{
         mainContainer.add(newText1);
 
         Collections.sort(BookList);
-
-
         for (int j=0; j<BookList.size(); j++){
-            long as = ((Book)BookList.get(j)).getPublishing_Year();;
+            long as = ((Book)BookList.get(j)).getPublishing_Year();
             newText1.append(String.valueOf(as));
             newText1.append(", ");
         }
 
-
         newFrame1.setVisible(true);
         newFrame1.setResizable(false);
-
     }
-
 }
 
 
