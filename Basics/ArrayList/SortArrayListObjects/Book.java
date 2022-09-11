@@ -1,4 +1,6 @@
-public class Book implements Comparable{
+import java.io.Serializable;
+
+public class Book implements Comparable {
     String BookName;
     String Book_ID;
     String Author;
