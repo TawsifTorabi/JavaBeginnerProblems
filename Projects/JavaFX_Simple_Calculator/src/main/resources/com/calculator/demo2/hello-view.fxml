@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="360.0" prefWidth="247.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="com.calculator.demo2.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <TextField fx:id="Input1" />
+   <TextField fx:id="Input2" />
+   <TextField fx:id="Output" />
+   <GridPane alignment="CENTER" prefHeight="213.0" prefWidth="317.0">
+     <columnConstraints>
+       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+     </columnConstraints>
+     <rowConstraints>
+       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+     </rowConstraints>
+      <children>
+         <Button fx:id="PlusOperationBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#plusOperation" text="+">
+            <GridPane.margin>
+               <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+            </GridPane.margin>
+         </Button>
+         <Button fx:id="MinusOperationBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#minusOperation" text="-" GridPane.columnIndex="1">
+            <GridPane.margin>
+               <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+            </GridPane.margin>
+         </Button>
+         <Button fx:id="MultiplyOperationBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#multiplyOperation" text="*" GridPane.columnIndex="2">
+            <GridPane.margin>
+               <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+            </GridPane.margin>
+         </Button>
+         <Button fx:id="DivideOperationBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#divideOperation" text="/" GridPane.rowIndex="1">
+            <GridPane.margin>
+               <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+            </GridPane.margin>
+         </Button>
+         <Button fx:id="PercentOperationBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#percentOperation" text="\%" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <GridPane.margin>
+               <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+            </GridPane.margin>
+         </Button>
+         <Button fx:id="PowerBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#powerOperationBtn" text="x^y" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <GridPane.margin>
+               <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+            </GridPane.margin>
+         </Button>
+         <Button fx:id="SqrtBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#sqrtOperation" text="sqrt" GridPane.rowIndex="2">
+            <GridPane.margin>
+               <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+            </GridPane.margin>
+         </Button>
+         <Button fx:id="FactorialBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#factorialOperation" text="x!" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <GridPane.margin>
+               <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+            </GridPane.margin>
+         </Button>
+      </children>
+   </GridPane>
+</VBox>
