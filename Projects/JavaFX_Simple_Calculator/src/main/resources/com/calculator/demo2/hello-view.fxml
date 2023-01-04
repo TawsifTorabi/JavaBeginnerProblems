@@ -8,13 +8,13 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" prefHeight="360.0" prefWidth="247.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="com.calculator.demo2.HelloController">
+<VBox alignment="CENTER" prefHeight="360.0" prefWidth="247.0" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.calculator.demo2.HelloController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-   <TextField fx:id="Input1" />
-   <TextField fx:id="Input2" />
-   <TextField fx:id="Output" />
+   <TextField fx:id="Input1" promptText="Input One..." />
+   <TextField fx:id="Input2" promptText="Input Two" />
+   <TextField fx:id="Output" editable="false" promptText="Output" />
    <GridPane alignment="CENTER" prefHeight="213.0" prefWidth="317.0">
      <columnConstraints>
        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
